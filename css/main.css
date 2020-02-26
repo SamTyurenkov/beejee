@@ -29,7 +29,6 @@
 
 html, body {
 	margin: 0;
-	height: 100%;
     width: 100%;
 }
 html {
@@ -75,7 +74,9 @@ html {
 	max-width: 1024px;
     margin: 0 auto;
 	padding-top: 100px;
-	align-items: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 }
 .post {
 	position: relative;
@@ -118,6 +119,8 @@ html {
     padding: 5px;
     color: #fff;	
 	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
 	transition: all 0.4s;
 }
 .complete {
@@ -139,25 +142,6 @@ html {
 	width: -moz-fit-content;
 	width: fit-content;
 }
-.option:nth-child(2) .speed, .tarif:nth-child(4) .speed {
-	background: #0075d9;
-}
-.option:nth-child(3) .speed, .tarif:nth-child(5) .speed {
-	background: #e74807;
-}
-.price {
-	font-weight: 600;
-	padding: 5px 0;
-	color: #444;
-}
-.free_options {
-	border-bottom: 1px solid #f2f2f2;
-	padding: 5px 20px 5px 0;
-	margin-right: -20px;
-	min-height: 50px;
-	position: relative;
-	color: #444;
-}
 .link {
 	color: #0075d9;
     display: block;
@@ -172,15 +156,13 @@ html {
     background: #82c12b;
     margin: 10px 0 0;
 	padding: 5px;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
 	transition: all 0.4s;
 	cursor: pointer;
 }
 .button:hover, .edit:hover, .complete:hover, #close:hover {
 	background: #70603e;
-}
-.dates {
-	padding: 10px 0;
-    color: #777;
 }
 #nextpage {
 	width:210px;
@@ -191,6 +173,8 @@ html {
 #close {
 	display: none;
 	background: #963232;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
 	transition: all 0.4s;
 }
 .error {
@@ -199,6 +183,8 @@ html {
     color: red;
 }
 .sortcontainer {
+	display:-webkit-inline-box;
+	display:-ms-inline-flexbox;
 	display:inline-flex;
 }
 .sortcontainer .button {
@@ -230,13 +216,7 @@ html {
         align-content: flex-start;
 	padding-top: 0;
 	}
-	.back {
-    margin: 0 0 14px;
-	border: none;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-	}
-		.post {
+	.post {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 80%;
 	        flex: 1 0 80%;
